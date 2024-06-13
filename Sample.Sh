@@ -1,1 +1,1 @@
-Will execute the commands for build
+echo 'Will execute the commands for build'
