@@ -8,3 +8,5 @@ $zipFilePath = Join-Path -Path $destinationFolder -ChildPath $zipFileName
 if (-not (Test-Path -Path $destinationFolder)) {
     New-Item -ItemType Directory -Path $destinationFolder
 }
+
+Write-Output "Created new Folder"
