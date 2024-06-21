@@ -41,4 +41,4 @@ Write-Output "Folder has been zipped and moved to $zipFilePath"
 
 # Update to the latest version
 Write-Output "Getting the latest version from Release"
-Copy-Item -Path $ReleaseFolder -Destination $ConfiguredFolder
+Copy-Item -Path $ReleaseFolder -Destination $ConfiguredFolder -Recurse
