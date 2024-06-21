@@ -33,7 +33,7 @@ Move-Item -Path $ReleaseFolder -Destination $tempFolder
 # Create a zip file from the moved folder
 Write-Output "Creating Zip at $BackupFolder"
 Add-Type -AssemblyName System.IO.Compression.FileSystem
-[System.IO.Compression.ZipFile]::CreateFromDirectory($tempFolder, $BackupFolder)
+[System.IO.Compression.ZipFile]::CreateFromDirectory($tempFolder, $zipFilePath)
 
 # Clean up the temporary folder
 Remove-Item -Path $tempFolder -Recurse
