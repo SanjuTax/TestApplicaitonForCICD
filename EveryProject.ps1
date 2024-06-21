@@ -4,9 +4,11 @@ Write-Output "Every Project power shell script triggered"
 $ReleaseFolder = 'C:\Jenkins\workspace\Sanjith_test\Release\Sanju'
 $ConfiguredFolder = 'C:\Jenkins\workspace\Sanjith_test\Configured'
 $BackupRoot = 'C:\Jenkins\workspace\Sanjith_test\Backup\'
+$zipFileName = "ArchivedFolder_$(Get-Date -Format 'yyyyMMddHHmmss').zip"
 $currentDate = Get-Date -Format "MMddyyyy"
 $tempFolder = 'C:\Jenkins\workspace\Sanjith_test\temp\'+$currentDate
 $BackupFolder = $BackupRoot+$currentDate
+$zipFilePath = Join-Path -Path $BackupRoot -ChildPath $zipFileName
 
 #check if configured folder is present
 if (-not (Test-Path -Path $ConfiguredFolder)) {
