@@ -5,6 +5,7 @@ $ReleaseFolder = 'C:\Jenkins\workspace\Sanjith_test\Release'
 $ConfiguredFolder = 'C:\Jenkins\workspace\Sanjith_test\Configured'
 $BackupRoot = 'C:\Jenkins\workspace\Sanjith_test\Backup\'
 $currentDate = Get-Date -Format "MMddyyyy"
+$tempFolder = 'C:\Jenkins\workspace\Sanjith_test\temp\'+$currentDate
 $BackupFolder = $BackupRoot+$currentDate
 
 #check if configured folder is present
