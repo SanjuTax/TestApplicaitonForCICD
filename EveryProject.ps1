@@ -3,7 +3,7 @@ Write-Output "Every Project power shell script triggered"
 # defining the paths to each folder
 $ReleaseFolder = 'C:\Jenkins\workspace\Sanjith_test\Release'
 $ConfiguredFolder = 'C:\Jenkins\workspace\Sanjith_test\Configured'
-$BackupRoot = 'C:\Jenkins\workspace\Sanjith_test\Backup'
+$BackupRoot = 'C:\Jenkins\workspace\Sanjith_test\Backup\'
 $currentDate = Get-Date -Format "MMddyyyy"
 $BackupFolder = $BackupRoot+$currentDate
 
