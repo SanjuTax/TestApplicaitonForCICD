@@ -27,8 +27,8 @@ if (-not (Test-Path -Path $BackupFolder)) {
 Write-Output "Creating tempFolder at $tempFolder"
 Remove-Item -Path $tempFolder -Recurse
 
-# Move the source folder to the temporary folder (cut operation)
-Move-Item -Path $ReleaseFolder -Destination $tempFolder
+# Move the Configured folder to the temporary folder (cut operation)
+Move-Item -Path $ConfiguredFolder -Destination $tempFolder
 
 # Create a zip file from the moved folder
 Write-Output "Creating Zip at $BackupFolder"
@@ -37,6 +37,8 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 
 # Clean up the temporary folder
 Remove-Item -Path $tempFolder -Recurse
-
 Write-Output "Folder has been zipped and moved to $zipFilePath"
+
+# Update to the latest version
+Copy-Item -Path $ReleaseFolder -Destination $ConfiguredFolder
 
