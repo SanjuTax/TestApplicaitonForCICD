@@ -23,7 +23,9 @@ if (-not (Test-Path -Path $BackupFolder)) {
 
 # Create a temporary folder for zipping
 Write-Output "Creating tempFolder at $tempFolder"
-New-Item -ItemType Directory -Path $tempFolder
+if (-not (Test-Path -Path $BackupFolder)) {
+    New-Item -ItemType Directory -Path $tempFolder
+}
 
 # Move the source folder to the temporary folder (cut operation)
 Move-Item -Path $ReleaseFolder -Destination $tempFolder
